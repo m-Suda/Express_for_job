@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",
     "module": "es6",
     "target": "es5",
     "sourceMap": true,
@@ -12,6 +13,9 @@
     "noUnusedParameters": false,  // 使ってない仮引数をエラーにする
     "noImplicitReturns": true     // 暗黙的に undefined を返却している関数をエラーにする
   },
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]
