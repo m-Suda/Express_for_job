@@ -14,6 +14,9 @@ class MainRoutes {
         this.router.get('/', (req: express.Request, res: express.Response) => {
             mainController.index(req, res);
         });
+        this.router.get('/fuga', (req: express.Request, res: express.Response) => {
+            mainController.fuga(req, res);
+        });
     }
 }
 

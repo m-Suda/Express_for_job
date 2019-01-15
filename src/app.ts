@@ -2,6 +2,7 @@ import * as express from 'express';
 // http://info-i.net/express-body-parser#body-parser
 import * as bodyParser from 'body-parser';
 import { mainRoutes } from "./routes/MainRoutes";
+import { aboutRoutes } from "./routes/AboutRoutes";
 
 class App {
 
@@ -39,10 +40,10 @@ class App {
          * <url>
          *   https://github.com/expressjs/body-parser#bodyparserurlencodedoptions
          */
-        this.app.use(bodyParser.urlencoded( {extended: false }));
+        this.app.use(bodyParser.urlencoded({ extended: false }));
 
-        // パスに/mainがあるときこのルーターが呼ばれる
         this.app.use('/main', mainRoutes);
+        this.app.use('/about', aboutRoutes);
     }
 }
 
